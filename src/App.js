@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from '@chakra-ui/react'
+import './App.css'
+import HomePage from './Pages/HomePage'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ProductPage from './Pages/ProductPage'
+import NavigationBar from './Components/NavigationBar'
+import PaymentUI from './Pages/PaymentUI'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Box bg={'#1A202C'} width={'full'} minH={'100vh'}>
+        <Box maxW={'375px'} minH={'100vh'} mx={'auto'} bg={'#FFFFFF'}>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/product' element={<ProductPage />} />
+            <Route path='/payment' element={<PaymentUI />} />
+          </Routes>
+          <NavigationBar />
+        </Box>
+      </Box>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
