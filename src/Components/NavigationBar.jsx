@@ -81,34 +81,36 @@ const NavigationBar = () => {
             )}
           </Flex>
         </Link>
-        <Flex
-          height={'30px'}
-          gap='2px'
-          align={'center'}
-          bg={'#EEEEEE'}
-          width={selected === 'cart' ? '76px' : '20px'}
-          pr={selected === 'cart' ? '8px' : '0px'}
-          borderRadius={'30px'}
-          transition={'all 0.5s'}
-          onClick={() => {
-            setSelected('cart')
-          }}
-        >
-          <Image src={bell} width={'25px'} height={'20px'} />
+        <Link to='/pay'>
+          <Flex
+            height={'30px'}
+            gap='2px'
+            align={'center'}
+            bg={'#EEEEEE'}
+            width={selected === 'cart' ? '76px' : '20px'}
+            pr={selected === 'cart' ? '8px' : '0px'}
+            borderRadius={'30px'}
+            transition={'all 0.5s'}
+            onClick={() => {
+              setSelected('cart')
+            }}
+          >
+            <Image src={bell} width={'25px'} height={'20px'} />
 
-          {selected === 'cart' && (
-            <Text
-              fontSize={'11px'}
-              whiteSpace={'nowrap'}
-              // width={selected === 'home' ? '30px' : '0px'}
-              overflow={'hidden'}
-              lineHeight={'16px'}
-              fontWeight={'600'}
-            >
-              Pay
-            </Text>
-          )}
-        </Flex>
+            {selected === 'pay' && (
+              <Text
+                fontSize={'11px'}
+                whiteSpace={'nowrap'}
+                // width={selected === 'home' ? '30px' : '0px'}
+                overflow={'hidden'}
+                lineHeight={'16px'}
+                fontWeight={'600'}
+              >
+                Pay
+              </Text>
+            )}
+          </Flex>
+        </Link>
         <Flex
           height={'30px'}
           gap='2px'

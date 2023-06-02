@@ -1,8 +1,7 @@
 import { Box, Button, Heading, Image, Text } from '@chakra-ui/react'
 import React from 'react'
-import handbag from '../Assets/HomePage/handbag.png'
 
-const OfferCard = () => {
+const OfferCard = ({ image, offerPercent }) => {
   return (
     <Box
       width={'260px'}
@@ -10,10 +9,10 @@ const OfferCard = () => {
       flexShrink={'0'}
       position={'relative'}
     >
-      <Image src={handbag} width={'260px'} h={'160px'} borderRadius={'20px'} />
+      <Image src={image} width={'260px'} h={'160px'} borderRadius={'20px'} />
       <Box position={'absolute'} top={'0'} mt={'17px'} ml={'15px'}>
         <Box>
-          <Heading fontSize={'25px'}>50% off</Heading>
+          <Heading fontSize={'25px'}>{offerPercent}% off</Heading>
           <Text>On everything Today</Text>
         </Box>
         <Text mt='10px' fontSize={'11px'} lineHeight={'150%'}>

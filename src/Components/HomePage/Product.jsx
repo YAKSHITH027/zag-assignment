@@ -1,12 +1,11 @@
 import { Box, Heading, Image, Text } from '@chakra-ui/react'
 import React from 'react'
-import product from '../Assets/HomePage/bag.png'
 
-const Product = () => {
+const Product = ({ image, title, desc, price }) => {
   return (
     <Box width='155px' height={'240px'}>
       <Image
-        src={product}
+        src={image}
         width='155px'
         height='170px'
         ml={'2px'}
@@ -15,9 +14,9 @@ const Product = () => {
         borderRadius={'15px'}
       />
       <Box mt='12px' textAlign={'center'} width={'125px'}>
-        <Heading fontSize={'14px'}>The Marc Jacobs</Heading>
-        <Text>Traveler Tote</Text>
-        <Heading fontSize={'14px'}>$195.00</Heading>
+        <Heading fontSize={'14px'}>{title}</Heading>
+        <Text fontSize={'11px'}>{desc}</Text>
+        <Heading fontSize={'14px'}>${price}</Heading>
       </Box>
     </Box>
   )

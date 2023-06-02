@@ -1,10 +1,13 @@
 import { Box } from '@chakra-ui/react'
 import './App.css'
-import HomePage from './Pages/HomePage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import ProductPage from './Pages/ProductPage'
+import { Suspense, lazy } from 'react'
 import NavigationBar from './Components/NavigationBar'
-import PaymentUI from './Pages/PaymentUI'
+import Loading from './Components/Loading'
+
+const ProductPage = lazy(() => import('./Pages/ProductPage'))
+const HomePage = lazy(() => import('./Pages/HomePage'))
+const PaymentUI = lazy(() => import('./Pages/PaymentUI'))
 
 function App() {
   return (
@@ -12,9 +15,31 @@ function App() {
       <Box bg={'#1A202C'} width={'full'} minH={'100vh'}>
         <Box maxW={'375px'} minH={'100vh'} mx={'auto'} bg={'#FFFFFF'}>
           <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/product' element={<ProductPage />} />
-            <Route path='/payment' element={<PaymentUI />} />
+            <Route
+              path='/'
+              element={
+                <Suspense fallback={<Loading />}>
+                  <HomePage />
+                </Suspense>
+              }
+            />
+            <Route
+              path='/product'
+              element={
+                <Suspense fallback={<Loading />}>
+                  <ProductPage />
+                </Suspense>
+              }
+            />
+
+            <Route
+              path='/pay'
+              element={
+                <Suspense fallback={<Loading />}>
+                  <PaymentUI />
+                </Suspense>
+              }
+            />
           </Routes>
           <NavigationBar />
         </Box>
