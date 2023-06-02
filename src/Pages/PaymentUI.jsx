@@ -55,24 +55,24 @@ const PaymentUI = () => {
             Zag
           </Heading>
           <form onSubmit={handleSubmit(handleLogin)}>
-            <FormControl isInvalid={errors.name}>
+            <FormControl isInvalid={errors.number}>
               <FormLabel>Card Number</FormLabel>
               <Input
                 textTransform={'none'}
-                type='name'
+                type='number'
                 placeholder='Enter number'
+                {...register('number', cardValidate)}
+              />
+              <FormErrorMessage>{errors.number?.message}</FormErrorMessage>
+            </FormControl>
+            <FormControl isInvalid={errors.name}>
+              <FormLabel>Name on name</FormLabel>
+              <Input
+                type='name'
+                placeholder='name'
                 {...register('name', nameValidate)}
               />
               <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
-            </FormControl>
-            <FormControl isInvalid={errors.card}>
-              <FormLabel>Name on Card</FormLabel>
-              <Input
-                type='card'
-                placeholder='name'
-                {...register('card', cardValidate)}
-              />
-              <FormErrorMessage>{errors.card?.message}</FormErrorMessage>
             </FormControl>
             <Flex gap='1rem'>
               <FormControl isInvalid={errors.year}>
