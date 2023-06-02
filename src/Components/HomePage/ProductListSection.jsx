@@ -39,7 +39,7 @@ const ProductListSection = () => {
       mt='11px'
       gap='10px'
       templateColumns={{
-        sm: 'repeat(2,1fr)',
+        base: 'repeat(2,1fr)',
         md: 'repeat(3,1fr)',
         lg: 'repeat(4,1fr)',
       }}
