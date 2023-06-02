@@ -1,4 +1,8 @@
 deployed link : https://zag-drab.vercel.app/
+tech-stack : react,chakra ui,react-hook-form, react-router-dom
+
+
+
 ## home page
 <img src='https://github.com/YAKSHITH027/store-img/blob/master/zag/Screenshot%20(86).png'/>
 
