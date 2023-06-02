@@ -1,3 +1,13 @@
+deployed link : https://zag-drab.vercel.app/
+## home page
+<img src='https://github.com/YAKSHITH027/store-img/blob/master/zag/Screenshot%20(86).png'/>
+
+## product page
+<img src='https://github.com/YAKSHITH027/store-img/blob/master/zag/Screenshot%20(89).png'/>
+
+## payment page
+<img src='https://github.com/YAKSHITH027/store-img/blob/master/zag/Screenshot%20(92).png'/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
