@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Box bg={'#1A202C'} width={'full'} minH={'100vh'}>
-        <Box maxW={'375px'} minH={'100vh'} mx={'auto'} bg={'#FFFFFF'}>
+        <Box minH={'100vh'} mx={'auto'} bg={'#FFFFFF'}>
           <Routes>
             <Route
               path='/'

@@ -7,13 +7,13 @@ const SearchBarSection = () => {
     <Flex
       mt='19px'
       justify={'space-between'}
-      width='325px'
       height={'50px'}
+      gap={'1rem'}
       position={'relative'}
     >
-      <Box>
+      <Box flexGrow={'1'}>
         <Input
-          width={'260px'}
+          minW={'220px'}
           height={'50px'}
           borderRadius={'30px'}
           pl={'58px'}

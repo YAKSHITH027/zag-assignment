@@ -12,7 +12,7 @@ const NavigationBar = () => {
     <Box
       height={'70px'}
       pos={'fixed'}
-      width={'375px'}
+      width={'100%'}
       bg='white'
       borderTopRadius={'30px'}
       bottom={'0'}
@@ -87,12 +87,12 @@ const NavigationBar = () => {
             gap='2px'
             align={'center'}
             bg={'#EEEEEE'}
-            width={selected === 'cart' ? '76px' : '20px'}
-            pr={selected === 'cart' ? '8px' : '0px'}
+            width={selected === 'pay' ? '76px' : '20px'}
+            pr={selected === 'pay' ? '8px' : '0px'}
             borderRadius={'30px'}
             transition={'all 0.5s'}
             onClick={() => {
-              setSelected('cart')
+              setSelected('pay')
             }}
           >
             <Image src={bell} width={'25px'} height={'20px'} />
@@ -106,7 +106,7 @@ const NavigationBar = () => {
                 lineHeight={'16px'}
                 fontWeight={'600'}
               >
-                Pay
+                Payment
               </Text>
             )}
           </Flex>

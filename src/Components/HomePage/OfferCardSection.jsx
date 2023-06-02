@@ -19,6 +19,16 @@ const OfferCardSection = () => {
       image: handbag,
       offerPercent: 60,
     },
+    {
+      id: 4,
+      image: handbag,
+      offerPercent: 70,
+    },
+    {
+      id: 5,
+      image: handbag,
+      offerPercent: 60,
+    },
   ]
   return (
     <Flex

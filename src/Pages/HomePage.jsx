@@ -18,8 +18,13 @@ const HomePage = () => {
         <SearchBarSection />
       </Box>
       <OfferCardSection />
-      <Box ml={'24px'} mt='25px'>
-        <Heading fontSize={'18px'} lineHeight={'150%'} fontWeight={'700'}>
+      <Box mt='25px'>
+        <Heading
+          ml={'24px'}
+          fontSize={'18px'}
+          lineHeight={'150%'}
+          fontWeight={'700'}
+        >
           New Arrivals
         </Heading>
         {/* products list */}

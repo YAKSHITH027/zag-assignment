@@ -66,7 +66,7 @@ const PaymentUI = () => {
               <FormErrorMessage>{errors.number?.message}</FormErrorMessage>
             </FormControl>
             <FormControl isInvalid={errors.name}>
-              <FormLabel>Name on name</FormLabel>
+              <FormLabel>Name on Card</FormLabel>
               <Input
                 type='name'
                 placeholder='name'

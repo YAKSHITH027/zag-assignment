@@ -35,7 +35,17 @@ const ProductListSection = () => {
     },
   ]
   return (
-    <Grid mt='11px' gap='10px' templateColumns={'repeat(2,1fr)'} pb='80px'>
+    <Grid
+      mt='11px'
+      gap='10px'
+      templateColumns={{
+        sm: 'repeat(2,1fr)',
+        md: 'repeat(3,1fr)',
+        lg: 'repeat(4,1fr)',
+      }}
+      pb='80px'
+      placeItems={'center'}
+    >
       {products.map((product) => {
         return <Product key={product.id} {...product} />
       })}
