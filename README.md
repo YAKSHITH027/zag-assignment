@@ -1,5 +1,8 @@
 deployed link : https://zag-drab.vercel.app/
-tech-stack : react,chakra ui,react-hook-form, react-router-dom
+
+tech-stacks : react,chakra ui,react-hook-form, react-router-dom
+
+desc : when user lands on landing page in the bottom of the screen there is a navigation bar using which user can navigate to diffrent pages. there are total 3 pages present
 
 
 
